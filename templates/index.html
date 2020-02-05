@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AutoML</title>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<h1>Lafarge Holcim</h1>
+		</div>
+		<h2>Please upload the csv/excel file</h2>
+	</div>
+	</header>
+	<div>
+		<form name="form1" action="" method=post enctype=multipart/form-data>
+			<input type=file name=file>
+			<input name="btn" type=submit value="Upload">
+		</form>
+	</div>
+	<form name="form" method="POST" action="/">
+		{%for i in range(0, len)%} 
+			<input type="checkbox" value={{folder_files[i]}} name="mycheckbox">{{folder_files[i]}}
+		{%endfor%}
+		<input name="btn" type="submit">
+	</form>
+
+</body>
+</html>
